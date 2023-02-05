@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Author = () => {
+const Author = ({author}) => {
   return (
     <div>
-        <h1>Author</h1>
+
       
     </div>
   )
