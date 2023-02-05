@@ -27,7 +27,7 @@ const PostCard = ({post}) => {
             alt={post.author.name}
             width='30px'
             height='30px'
-            className='w-10 h-10 rounded-full mx-auto'
+            className='w-10 h-10 rounded-full'
             src={post.author.photo.url}
 
           />
