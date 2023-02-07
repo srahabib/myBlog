@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     glftLoader.load('./old_computers/scene.gltf', (gltf) => {
 
       //gltf.scene.scale.set(0.1, 0.1, 0.1);
-      test.scene.add(gltf.scene);
+      test.scene?.add(gltf.scene);
 
       // console.log(loadedModel);
     });
