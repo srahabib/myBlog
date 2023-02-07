@@ -45,7 +45,7 @@ export default class SceneInit {
       // NOTE: Anti-aliasing smooths out the edges.
       antialias: true,
     });
-    this.renderer.setSize(1550,400);
+    this.renderer.setSize(window.innerWidth, window.innerHeight);
     // this.renderer.shadowMap.enabled = true;
     document.body.appendChild(this.renderer.domElement);
 

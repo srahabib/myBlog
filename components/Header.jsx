@@ -32,6 +32,13 @@ const Header = () => {
                 </span>
             </Link>
 
+            <Link href="/">
+                <span className='md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
+                About Me
+                </span>
+            </Link>
+
+
             </div>
 
         </div>
