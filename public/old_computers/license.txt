@@ -1,0 +1,11 @@
+Model Information:
+* title:	Old Computers
+* source:	https://sketchfab.com/3d-models/old-computers-7bb6e720499a467b8e0427451d180063
+* author:	Rafael Rodrigues (https://sketchfab.com/RafaelBR873D)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Old Computers" (https://sketchfab.com/3d-models/old-computers-7bb6e720499a467b8e0427451d180063) by Rafael Rodrigues (https://sketchfab.com/RafaelBR873D) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
