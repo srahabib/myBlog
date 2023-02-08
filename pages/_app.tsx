@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     test.animate();
 
     const glftLoader = new GLTFLoader();
-    glftLoader.load('./old_computers/scene.gltf', (gltf) => {
+    glftLoader.load('/old_computers/scene.gltf', (gltf) => {
 
       //gltf.scene.scale.set(0.1, 0.1, 0.1);
       test.scene?.add(gltf.scene);
@@ -29,12 +29,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     });
 
 
-
-    // const boxGeometry = new THREE.BoxGeometry(16, 16, 16);
-    // const boxMaterial = new THREE.MeshNormalMaterial();
-    // const boxMesh = new THREE.Mesh(boxGeometry, boxMaterial);
-
-    // test.scene.add(boxMesh);
   }, []);
 
   return (

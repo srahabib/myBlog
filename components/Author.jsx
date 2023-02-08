@@ -2,7 +2,8 @@ import React from 'react'
 
 const Author = ({author}) => {
   return (
-    <div>
+    <div style={{color:"red"}}>
+      Author
 
       
     </div>

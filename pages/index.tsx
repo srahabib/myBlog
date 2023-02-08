@@ -3,6 +3,8 @@ import Head from 'next/head'
 import {PostCard , Categories , PostWidget} from '../components'
 import {getPosts} from '../services'
 
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+
 
 
 export default function Home({ posts }: any) {
