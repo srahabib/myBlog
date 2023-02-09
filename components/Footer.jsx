@@ -1,8 +1,13 @@
 import React from 'react'
 
-const Footer = ({footer}) => {
+const Footer = () => {
   return (
+    <div>
+    
     <canvas id="myThreeJsCanvas"></canvas>
+    
+    
+    </div>
   )
 }
 

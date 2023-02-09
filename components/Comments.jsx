@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Comments = () => {
+const Comments = ({Comments}) => {
   return (
-    <div>
+    <div style={{color:"red"}} >
       Comments
       
         
