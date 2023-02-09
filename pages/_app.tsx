@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     const glftLoader = new GLTFLoader();
     glftLoader.load('/old_computers/scene.gltf', (gltf) => {
 
-      //gltf.scene.scale.set(0.1, 0.1, 0.1);
+      gltf.scene.scale.set(1.2, 1.2, 1.2);
       test.scene?.add(gltf.scene);
 
       // console.log(loadedModel);
