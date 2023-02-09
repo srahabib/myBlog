@@ -9,4 +9,5 @@ export {default as CommentsForm} from './CommentsForm';
 export {default as PostDetail} from './PostDetail';
 export {default as Loader } from './Loader';
 export {default as Contact} from './Contact';
+export {default as Footer} from './Footer';
 
