@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import Stats from 'three/examples/jsm/libs/stats.module';
 
 
@@ -26,6 +27,8 @@ export default class SceneInit {
     // NOTE: Lighting is basically required.
     this.ambientLight = undefined;
     this.directionalLight = undefined;
+
+    // NOTE: Loaders.
   }
 
   initialize() {
@@ -79,15 +82,34 @@ export default class SceneInit {
     //   colorB: { type: 'vec3', value: new THREE.Color(0xfff000) },
     //   colorA: { type: 'vec3', value: new THREE.Color(0xffffff) },
     // };
+
+    // NOTE: Load gltf model.
+    var model;
+    var loader = new GLTFLoader();
+    loader.load('/old_computers/scene.gltf', (gltf) => {
+      this.model = gltf.scene
+  
+
+      this.scene.add(gltf.scene);
+    });
+
   }
 
+  
+
   animate() {
+
+    if (this.model) {
+      this.model.rotation.y += 0.001;
+    }
+    
     // NOTE: Window is implied.
     // requestAnimationFrame(this.animate.bind(this));
     window.requestAnimationFrame(this.animate.bind(this));
     this.render();
     this.stats.update();
     this.controls.update();
+
   }
 
   render() {

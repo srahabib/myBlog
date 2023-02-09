@@ -19,14 +19,23 @@ function MyApp({ Component, pageProps }: AppProps) {
     test.initialize();
     test.animate();
 
-    const glftLoader = new GLTFLoader();
-    glftLoader.load('/old_computers/scene.gltf', (gltf) => {
+    
+    // const glftLoader = new GLTFLoader();
+    
+    // glftLoader.load('/old_computers/scene.gltf', (gltf) => {
 
-      //gltf.scene.scale.set(1.2, 1.2, 1.2);
-      test.scene?.add(gltf.scene);
+      
+    //   //gltf.scene.scale.set(1.2, 1.2, 1.2);
+    //   test.scene?.add(gltf.scene);
 
-      // console.log(loadedModel);
-    });
+    //   // console.log(loadedModel);
+    // });
+
+
+    
+
+
+    
 
 
   }, []);
