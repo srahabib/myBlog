@@ -32,6 +32,8 @@ const PostWidget = ({
           <div className="w-16 flex-none">
             <Image
               loader={grpahCMSImageLoader}
+              unoptimized
+              priority ={true}
               alt={post.title}
               height="60"
               width="60"            
