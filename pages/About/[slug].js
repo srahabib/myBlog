@@ -1,7 +1,7 @@
 import React from 'react';
 import {useRouter} from 'next/router';
 
-import { Footer } from '../../components';
+import { Model } from '../../components';
 
 
 const About = () => {
@@ -34,7 +34,7 @@ const About = () => {
                 <img className="sm:hidden block w-full" src="/menwho.jpg" alt="people discussing on board" />
             </div>
         </div>
-        <Footer/>
+        <Model/>
         
     </div>
     );
