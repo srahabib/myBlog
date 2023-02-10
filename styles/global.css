@@ -54,23 +54,16 @@ a {
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-  -webkit-appearance: none;
+#myThreeJsCanvas {
+  overflow-x: hidden;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-::-webkit-scrollbar:vertical {
-  width: 10px;
-}
-
-::-webkit-scrollbar:horizontal {
-  height: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #ccc;
-  border: 2px solid #eee;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #eee;
+img {
+  width: auto;
+  height: auto;
 }/*# sourceMappingURL=global.css.map */

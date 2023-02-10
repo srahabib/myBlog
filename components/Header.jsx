@@ -60,7 +60,7 @@ const Header = () => {
 
             <div className='hidden md:float-left md:contents'>
                 
-            <Link href="/">
+            <Link href="/Contact/ContactMe">
                 <span className='md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
                 Contact
                 </span>
@@ -74,7 +74,7 @@ const Header = () => {
 
             <Link href="/">
                 <span className='md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
-                Shop
+                Blog
                 </span>
             </Link>
 
@@ -108,19 +108,11 @@ const Header = () => {
                 <button type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-pink-400 hover:bg-pink-500 focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-lg text-sm px-4 py-2  ">Search</button>
             </div>
         </form>
-
-                <div>
+                
+                {/* <div>
                     <div style={{color:"red"}}>Post</div>
                     <div style={{color:"red"}}>Created@</div>
                 </div>
-
-                {/* {Posts.map((inp, index) => {
-                    <div  style={{color:"red"}} >
-                        hhiiiiiiii
-                    </div>
-
-
-                })} */}
 
 
             {
@@ -138,7 +130,7 @@ const Header = () => {
                 {post.node.createdAt}</p>
                 </div>
             ))
-            }
+            } */}
 
 
         <form className=' lg:hidden md:w-full '>

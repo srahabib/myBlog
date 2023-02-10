@@ -1,11 +1,18 @@
 import React from 'react'
+import Model from './Model'
+
 
 const Contact = () => {
   return (
-    <div>
-        About Me
-      
+
+
+    <div >
+      <h1>Contact</h1>
+      <Model />
     </div>
+
+
+    
   )
 }
 
