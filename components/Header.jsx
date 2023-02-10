@@ -6,8 +6,6 @@ import { getPosts } from '../services'
 
 const Header = () => {
 
-    
-
     const [Posts, setPosts] = useState([])
     useEffect(() => {
         getPosts().then((result) => {
@@ -15,8 +13,6 @@ const Header = () => {
         })
 
     }, []);
-
-    
 
 
     //  const [Categories , setCategories] = useState([])
