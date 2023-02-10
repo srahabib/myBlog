@@ -23,14 +23,14 @@ const PostCard = ({post}) => {
       </h1>
       <div className='block lg:flex text-center items-center justify-center mb-8 w-full'>
         <div className='flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8'>
-          <img 
+          {/* <img 
             alt={post.author.name}
             width='30px'
             height='30px'
             className='w-10 h-10 rounded-full'
             src={post.author.photo.url}
 
-          />
+          /> */}
           <p className="inline align-middle text-gray-700 ml-2 text-lg">{post.author.name}</p>
           </div>
           <div className="font-medium text-gray-700 ">
