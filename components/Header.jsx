@@ -6,6 +6,8 @@ import { getPosts } from '../services'
 
 const Header = () => {
 
+    
+
     const [Posts, setPosts] = useState([])
     useEffect(() => {
         getPosts().then((result) => {
@@ -13,6 +15,8 @@ const Header = () => {
         })
 
     }, []);
+
+    
 
 
     //  const [Categories , setCategories] = useState([])
@@ -24,19 +28,24 @@ const Header = () => {
 
     const [searchInput, setSearchInput] = useState("");
 
-    const handleChange = (e) => {
-        e.preventDefault();
-        setSearchInput(e.target.value);
-        //console.log(e.target.value);
-      };
-      
-      if (searchInput.length > 0) {
-          Posts.filter((inp) => {
-          console.log(inp.node.title.match(searchInput));
-          return inp.node.title.match(searchInput);
+    // const handleChange = (e) => {
+    //     e.preventDefault();
+    //     setSearchInput(e.target.value);
+    //     //console.log(e.target.value);
+    //   };
+
+
+    //   if (searchInput.length > 0) {
+    //     countries.filter((inp) => {
+    //       //console.log(inp.name.match(searchInput));
+    //       return inp.name.match(searchInput);
+    //       //fil.push(res);
           
-      });
-      }
+          
+    //   });
+    //   }
+
+
 
 
     
@@ -92,8 +101,8 @@ const Header = () => {
                     <svg aria-hidden="true" className="w-5 h-5 text-gray-500 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                 </div>
 
-                <input  onChange={handleChange}
-                        value={searchInput} 
+                <input  onChange={event => setSearchInput(event.target.value)}
+                        //value={searchInput} 
                         type="search" 
                         style={{outline: "none"}} 
                         autoComplete="off" 
@@ -105,8 +114,8 @@ const Header = () => {
         </form>
 
                 <div>
-                    <div style={{color:"red"}}>Country</div>
-                    <div style={{color:"red"}}>Continent</div>
+                    <div style={{color:"red"}}>Post</div>
+                    <div style={{color:"red"}}>Created@</div>
                 </div>
 
                 {/* {Posts.map((inp, index) => {
@@ -117,11 +126,23 @@ const Header = () => {
 
                 })} */}
 
-                {Posts.map((inp, index) => (
-                    
-                    <div style={{color:"red"}} key={index} >{inp.node.title}</div>
-                        
-                ))}
+
+            {
+            Posts.filter(post => {
+                if (searchInput === "") {
+                //if query is empty
+                return post;
+                } else if (post.node.title.toLowerCase().includes(searchInput.toLowerCase())) {
+                //returns filtered array
+                return post;
+                }
+            }).map((post, index) => (
+                <div className="box" key={index}>
+                <p style={{color :"red"}}>{post.node.title}
+                {post.node.createdAt}</p>
+                </div>
+            ))
+            }
 
 
         <form className=' lg:hidden md:w-full '>
