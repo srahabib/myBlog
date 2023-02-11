@@ -40,7 +40,7 @@ const Contact= () => {
                             545, Street 11, Block F <br />
                             Dean Boulevard, Ohio
                         </p>
-                        <a href="javascript:void(0)">
+                        <a href="">
                             <p className="text-white pt-16 font-bold tracking-wide underline">View Job Openings</p>
                         </a>
                     </div>
@@ -54,7 +54,7 @@ const Contact= () => {
                                     <label htmlFor="full_name" className="text-gray-800 text-sm font-semibold leading-tight tracking-normal mb-2">
                                         Full Name
                                     </label>
-                                    <input required id="full_name" name="full_name" type="text" className="focus:outline-none focus:border focus:border-pink-400 font-normal w-64 h-10 flex items-center pl-3 text-sm  rounded border" placeholder={"ok"} />
+                                    <input required id="full_name" name="full_name" type="text" className="focus:outline-none focus:border focus:border-pink-400 font-normal w-64 h-10 flex items-center pl-3 text-sm  rounded border" placeholder={"Enter Name"} />
                                 </div>
                             </div>
                             <div className="w-2/4 max-w-xs xl:flex xl:justify-end">
@@ -62,7 +62,7 @@ const Contact= () => {
                                     <label htmlFor="email" className="text-gray-800 text-sm font-semibold leading-tight tracking-normal mb-2">
                                         Email
                                     </label>
-                                    <input required id="email" name="email" type="email" className="focus:outline-none focus:border focus:border-pink-400 font-normal w-64 h-10 flex items-center pl-3 text-sm  rounded border" placeholder={"ok"} />
+                                    <input required id="email" name="email" type="email" className="focus:outline-none focus:border focus:border-pink-400 font-normal w-64 h-10 flex items-center pl-3 text-sm  rounded border" placeholder={"Enter Email"} />
                                 </div>
                             </div>
                         </div>
@@ -72,7 +72,7 @@ const Contact= () => {
                                     <label htmlFor="phone" className="text-gray-800 text-sm font-semibold leading-tight tracking-normal mb-2">
                                         Phone
                                     </label>
-                                    <input required id="phone" name="phone" type="tel" className="focus:outline-none focus:border focus:border-pink-400 font-normal w-64 h-10 flex items-center pl-3 text-sm  rounded border" placeholder />
+                                    <input required id="phone" name="phone" type="tel" className="focus:outline-none focus:border focus:border-pink-400 font-normal w-64 h-10 flex items-center pl-3 text-sm  rounded border" placeholder={"Enter Phone Number"} />
                                 </div>
                             </div>
                         </div>
@@ -81,7 +81,7 @@ const Contact= () => {
                                 <label className="text-sm font-semibold text-gray-800 mb-2" htmlFor="message">
                                     Message
                                 </label>
-                                <textarea placeholder name="message" className=" border mb-4 rounded py-2 text-sm outline-none resize-none px-3 focus:border focus:border-pink-400" rows={8} id="message" defaultValue={""} />
+                                <textarea placeholder={"Leave a Message"} name="message" className=" border mb-4 rounded py-2 text-sm outline-none resize-none px-3 focus:border focus:border-pink-400" rows={8} id="message" defaultValue={""} />
                             </div>
                             <button type="submit" className="focus:outline-none bg-pink-400 transition duration-150 ease-in-out hover:bg-pink-500 rounded text-white px-8 py-3 text-sm leading-6">
                                 Submit
