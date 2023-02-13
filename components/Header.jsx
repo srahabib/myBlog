@@ -2,6 +2,7 @@ import React, {useState , useEffect } from 'react'
 import Link from 'next/link'
 //import { getCategories } from '../services'
 import { getPosts } from '../services'
+import { Route, Routes, useNavigate } from 'react-router-dom';
 
 
 const Header = () => {
@@ -36,10 +37,34 @@ const Header = () => {
     //       //console.log(inp.name.match(searchInput));
     //       return inp.name.match(searchInput);
     //       //fil.push(res);
-          
+        //let navigate = useNavigate();  
           
     //   });
     //   }
+    function handleSearch(e) {
+        // here you can get the inputValue
+         e.preventDefault();
+         //window.history.pushState({}, "", href)
+         //console.log(searchInput);
+
+         Posts.filter(post => {
+            if (searchInput === "") {
+            //if query is empty
+            return post;
+            } else if (post.node.title.toLowerCase().includes(searchInput.toLowerCase())) {
+            console.log(searchInput);
+            //returns filtered array
+            console.log(post.node.title);
+            console.log(post);
+            let loc = `/post/${post.node.slug}`;
+            window.location.href=loc;
+            return post;
+            
+            }
+        });
+
+
+      }
 
 
 
@@ -97,30 +122,32 @@ const Header = () => {
                     <svg aria-hidden="true" className="w-5 h-5 text-gray-500 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                 </div>
 
-                <input  onChange={event => setSearchInput(event.target.value)}
-                        //value={searchInput} 
+                <input 
+                        onChange={(e) => setSearchInput(e.target.value)}
                         type="search" 
                         style={{outline: "none"}} 
                         autoComplete="off" 
                         id="default-search" 
                         className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-pink-500 focus:border-pink-500  " 
                         placeholder="Search Here..." required/>
-                <button type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-pink-400 hover:bg-pink-500 focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-lg text-sm px-4 py-2  ">Search</button>
+                <button type="submit"  onClick={handleSearch} className="text-white absolute right-2.5 bottom-2.5 bg-pink-400 hover:bg-pink-500 focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-lg text-sm px-4 py-2  ">Search</button>
             </div>
         </form>
                 
-                {/* <div>
+                 {/* <div>
                     <div style={{color:"red"}}>Post</div>
                     <div style={{color:"red"}}>Created@</div>
-                </div>
+                </div> */}
 
 
-            {
+            {/* {
+                
             Posts.filter(post => {
                 if (searchInput === "") {
                 //if query is empty
                 return post;
                 } else if (post.node.title.toLowerCase().includes(searchInput.toLowerCase())) {
+                console.log(searchInput);
                 //returns filtered array
                 return post;
                 }
@@ -130,7 +157,7 @@ const Header = () => {
                 {post.node.createdAt}</p>
                 </div>
             ))
-            } */}
+            }  */}
 
 
         <form className=' lg:hidden md:w-full '>
