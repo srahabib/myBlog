@@ -1,13 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import {PostCard , Categories , PostWidget, Author,Up,Model, Footer} from '../components'
+import {PostCard , Categories , PostWidget, Author,Up,Model, Footer, Search} from '../components'
 import {getPosts} from '../services'
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-
+import { useState } from 'react';
 
 
 export default function Home({ posts }: any) {
+
   return (
     <div className="container mx-auto px-10 mb-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -20,6 +21,7 @@ export default function Home({ posts }: any) {
           <div className="lg:sticky relative top-8">
             <PostWidget  />
             <Categories />
+
             
             
             

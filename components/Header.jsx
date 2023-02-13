@@ -3,8 +3,8 @@ import Link from 'next/link'
 //import { getCategories } from '../services'
 import { getPosts } from '../services'
 import { Route, Routes, useNavigate } from 'react-router-dom';
-
-
+import { Search } from '../components';
+import { redirect } from "react-router-dom";
 const Header = () => {
 
     const [Posts, setPosts] = useState([])
@@ -14,60 +14,51 @@ const Header = () => {
         })
 
     }, []);
-
-
-    //  const [Categories , setCategories] = useState([])
-    //  useEffect(() => {
-    //      getCategories().then((result) => {
-    //          setCategories(result)
-    //      })
-    //  }, []);
-
     const [searchInput, setSearchInput] = useState("");
 
-    // const handleChange = (e) => {
-    //     e.preventDefault();
-    //     setSearchInput(e.target.value);
-    //     //console.log(e.target.value);
-    //   };
+  
+  
+  const parentToChild = () => {
+    
+    setData("This is data from Parent Component to the Child Component.");
+   
+  }
 
 
-    //   if (searchInput.length > 0) {
-    //     countries.filter((inp) => {
-    //       //console.log(inp.name.match(searchInput));
-    //       return inp.name.match(searchInput);
-    //       //fil.push(res);
-        //let navigate = useNavigate();  
-          
-    //   });
-    //   }
     function handleSearch(e) {
         // here you can get the inputValue
          e.preventDefault();
          //window.history.pushState({}, "", href)
-         //console.log(searchInput);
 
-         Posts.filter(post => {
+            Posts.filter(post => {
             if (searchInput === "") {
             //if query is empty
             return post;
             } else if (post.node.title.toLowerCase().includes(searchInput.toLowerCase())) {
-            console.log(searchInput);
+            //console.log(searchInput);
             //returns filtered array
             console.log(post.node.title);
             console.log(post);
-            let loc = `/post/${post.node.slug}`;
+            let loc = `/SearchResults/${searchInput}`;
             window.location.href=loc;
+            //redirect("/Search");
             return post;
             
             }
         });
 
 
-      }
+        // const results =()=>{Posts.filter((post) =>
+            
+        //     post.node.title.toLowerCase().includes(searchInput.toLowerCase())
+            
+        // );
+        // setSearchResults(results);
+        // } 
+        // console.log(results);
 
 
-
+    }
 
     
   return (
@@ -97,7 +88,7 @@ const Header = () => {
                 </span>
             </Link>
 
-            <Link href="/">
+            <Link href="/SearchResults/res">
                 <span className='md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
                 Blog
                 </span>
@@ -121,18 +112,23 @@ const Header = () => {
                 <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <svg aria-hidden="true" className="w-5 h-5 text-gray-500 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                 </div>
-
+                
                 <input 
-                        onChange={(e) => setSearchInput(e.target.value)}
+                        onChange={(e) => { setSearchInput(e.target.value);}}
                         type="search" 
                         style={{outline: "none"}} 
                         autoComplete="off" 
                         id="default-search" 
                         className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-pink-500 focus:border-pink-500  " 
                         placeholder="Search Here..." required/>
-                <button type="submit"  onClick={handleSearch} className="text-white absolute right-2.5 bottom-2.5 bg-pink-400 hover:bg-pink-500 focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-lg text-sm px-4 py-2  ">Search</button>
+                <button type="submit"  onClick={handleSearch} className="text-white absolute right-2.5 bottom-2.5 bg-pink-400 hover:bg-pink-500 focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-lg text-sm px-4 py-2  ">Search here</button>
+                
             </div>
+            
         </form>
+        
+
+        
                 
                  {/* <div>
                     <div style={{color:"red"}}>Post</div>
@@ -158,6 +154,18 @@ const Header = () => {
                 </div>
             ))
             }  */}
+
+
+            {/* {
+                Posts.map((post, index) => (
+                    <div className="box" key={index}>
+                    <p style={{color :"red"}}>{post.node.title}
+                    </p>
+                    </div>))
+            } */}
+
+
+            
 
 
         <form className=' lg:hidden md:w-full '>

@@ -1,26 +1,13 @@
-// import {React, useState} from 'react'
+import React from 'react'
 
-// import { getPosts } from '../services';
+const Search = ({parentToChild}) => {
+  return (
+    <div style={{color: "red"}}>
+        hiiii + {parentToChild}
 
-// const Search = () => {
-//     const [searchInput, setSearchInput] = useState("");
-
-//     const handleChange = (e) => {
-//         e.preventDefault();
-//         setSearchInput(e.target.value);
-//       };
       
-//       if (searchInput.length > 0) {
-//           countries.filter((input) => {
-//           return input.title.match(searchInput);
-//       });
-//       }
+    </div>
+  )
+}
 
-//   return (
-//     <div>
-      
-//     </div>
-//   )
-// }
-
-// export default Search
+export default Search
