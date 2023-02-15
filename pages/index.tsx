@@ -7,7 +7,9 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { useState } from 'react';
 
 
-export default function Home({ posts }: any) {
+export default function Home({ posts }: any ) {
+  
+  
 
   return (
     <div className="container mx-auto px-10 mb-8">
@@ -21,6 +23,9 @@ export default function Home({ posts }: any) {
           <div className="lg:sticky relative top-8">
             <PostWidget  />
             <Categories />
+
+            
+            
 
             
             

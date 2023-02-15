@@ -2,6 +2,7 @@ import React from 'react'
 import {useRouter} from 'next/router';
 
 import { Model } from '../../components';
+import Search from '../../components/Search';
 
 const Contact= () => {
 
@@ -9,7 +10,10 @@ const Contact= () => {
     const {slug} = router.query;
 
     return (
+        
+
         <div className="container mx-auto pt-4 pb-4">
+            <Search />
             <div className="lg:flex">
                 <div className="xl:w-2/5 lg:w-2/5  py-10 xl:rounded-bl rounded-tl rounded-tr xl:rounded-tr-none">
                     <div className="xl:w-5/6 xl:px-0 px-8 mx-auto">
