@@ -4,13 +4,19 @@ const Searched = ({filtered}) => {
     console.log(filtered);
   return (
     <div>
+       <div>hiiiii</div>
 
-        <div style={{color:"red"}}>Searched</div>
-        {filtered.map((post, index) => (
-          <div className="box" key={index}>
-          <p style={{color :"red"}}>{post.node.title}
-          </p>
-          </div>))}
+         <div>from secreched</div>
+         {/* {
+            filtered.map((post, index) => (
+                <div className="box" key={index}>
+                <p style={{color :"red"}}>{post.node.title}
+                </p>
+                </div>))
+         } */}
+
+         
+        {filtered}+ from searched
 
           <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white mb-5">
         <img className="w-full" src="/menwho.jpg" alt="Sunset in the mountains"/>

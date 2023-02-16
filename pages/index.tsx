@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import {PostCard , Categories , PostWidget, Author,Up,Model, Footer, Search} from '../components'
+import {PostCard , Categories , PostWidget, Author,Up, Footer, Search} from '../components'
 import {getPosts} from '../services'
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
@@ -33,7 +33,7 @@ export default function Home({ posts }: any ) {
           </div>
         </div>
       </div>
-       <Model/>
+      
        
 
     </div>

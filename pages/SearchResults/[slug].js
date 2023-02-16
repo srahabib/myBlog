@@ -4,42 +4,21 @@ import Searched from'../../components/Search.jsx'
 import { useState } from 'react'
 
 import filtered from '../../components/Search'
+import {useRouter} from 'next/router';
+
+export default () => {
 
 
-const SearchResults = ({post}) => {
-  
-
-
-
-
-
-
+  const router = useRouter()
+  console.log(router.query);
 
 
   return (
-    <div>
-      <div style={{color:"red"}}>hi</div>
-      
-      {/* {
-
-        filtered.map((post, index) => (
-          <div className="box" key={index}>
-          <p style={{color :"red"}}>{post.node.title}
-          </p>
-          </div>))
-
-          
-
-      } */}
-
-    
-        <Searched />
-
-        
-        <Model />
-       
+    <div> 
+      router is {router.query.slug}
+   
     </div>
   )
-}
 
-export default SearchResults
+
+}

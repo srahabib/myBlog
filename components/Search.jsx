@@ -5,38 +5,37 @@ import { getPosts } from '../services';
 import Searched from './Searched';
 
 import { useHistory } from 'react-router';
-
+import Router from 'next/router'
 
 export const Search = () => {
 
-  const arr = ['A', 'B', 'C', 'D'];
 
-  const [Posts, setPosts] = useState([])
+//   const [Posts, setPosts] = useState([])
   
-    useEffect(() => {
-        getPosts().then((result) => {
-            setPosts(result)
-        })
+//     useEffect(() => {
+//         getPosts().then((result) => {
+//             setPosts(result)
+//         })
 
-    }, []);
+//     }, []);
 
-  const [searchInput, setSearchInput] = useState("");
-  //const [searchResults, setSearchResults] = useState([]);
+   const [searchInput, setSearchInput] = useState("");
+//   //const [searchResults, setSearchResults] = useState([]);
 
   
 
-  const filtered = Posts.filter(post => {
-    if (searchInput === "") {
-    //if query is empty
-    return post;
-    } else if (post.node.title.toLowerCase().includes(searchInput.toLowerCase())) {
-    //console.log(searchInput);
-    //returns filtered array
-    // console.log(post.node.title);
-    // console.log(post);
-    return post.node.title.toLowerCase().includes(searchInput.toLowerCase())
-    }
-});
+//   const filtered = Posts.filter(post => {
+//     if (searchInput === "") {
+//     //if query is empty
+//     return post;
+//     } else if (post.node.title.toLowerCase().includes(searchInput.toLowerCase())) {
+//     //console.log(searchInput);
+//     //returns filtered array
+//     // console.log(post.node.title);
+//      console.log("true");
+//     return post.node.title.toLowerCase().includes(searchInput.toLowerCase())
+//     }
+// });
 
 
 
@@ -44,10 +43,20 @@ export const Search = () => {
         // here you can get the inputValue
          e.preventDefault();
          //window.history.pushState({}, "", href)
-         console.log(filtered);
-         const loc = "/SearchResults/" + searchInput;
+         //console.log(filtered);
+         
+         //const loc = "/SearchResults/" + searchInput;
          //window.history.replaceState("", "", loc);
-         window.location.href = loc;
+         //window.location.href = loc;
+
+         //return filtered;
+
+         Router.push({
+          pathname: '/SearchResults/[keyword]',
+          query: { "keyword": searchInput },
+      })
+        
+         
 
 }
 
@@ -58,10 +67,10 @@ export const Search = () => {
     <div> 
       
       <div>
-      <Searched filtered={filtered} />
+      {/* <Searched filtered={searchInput} /> */}
       </div>
 
-<form className=' absolute top-7 left-1/3 lg:w-1/3 hidden lg:inline md:w-1/2 sm:w-1/2'>   
+<form  className=' absolute top-7 left-1/3 lg:w-1/3 hidden lg:inline md:w-1/2 sm:w-1/2'>   
     <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only ">Search</label>
     <div className="relative">
         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">

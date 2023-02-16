@@ -6,7 +6,7 @@ import 'tailwindcss/tailwind.css'
 import '../styles/global.scss'
 
 import * as THREE from 'three'
-import SceneInit from "../components/SceneInit"
+
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { Scene } from 'three'
 
@@ -14,31 +14,31 @@ import { Scene } from 'three'
 
 function MyApp({ Component, pageProps }: AppProps) {
 
-  useEffect(() => {
-    const test = new SceneInit('myThreeJsCanvas');
-    test.initialize();
-    test.animate();
+  // useEffect(() => {
+  //   const test = new SceneInit('myThreeJsCanvas');
+  //   test.initialize();
+  //   test.animate();
 
     
-    // const glftLoader = new GLTFLoader();
+  //   // const glftLoader = new GLTFLoader();
     
-    // glftLoader.load('/old_computers/scene.gltf', (gltf) => {
+  //   // glftLoader.load('/old_computers/scene.gltf', (gltf) => {
 
       
-    //   //gltf.scene.scale.set(1.2, 1.2, 1.2);
-    //   test.scene?.add(gltf.scene);
+  //   //   //gltf.scene.scale.set(1.2, 1.2, 1.2);
+  //   //   test.scene?.add(gltf.scene);
 
-    //   // console.log(loadedModel);
-    // });
-
-
-    
+  //   //   // console.log(loadedModel);
+  //   // });
 
 
     
 
 
-  }, []);
+    
+
+
+  // }, []);
 
   return (
     
