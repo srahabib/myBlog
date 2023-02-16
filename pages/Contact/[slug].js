@@ -10,11 +10,6 @@ const Contact= () => {
     const router = useRouter();
     const {slug} = router.query;
 
-
-    
-
-
-
     return (
         
 
