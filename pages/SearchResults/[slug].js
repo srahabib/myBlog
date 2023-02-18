@@ -1,6 +1,6 @@
 import React from 'react'
 import Model from '../../components/Model'
-import Searched from'../../components/Search.jsx'
+import { Search } from'../../components/Search.jsx'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import filtered from '../../components/Search'
@@ -46,20 +46,10 @@ export default ({posts}) => {
      //console.log(filtered);
 
   return (
-    <div> 
-      {/* router is {router.query.slug} */}
+    <div className='flex flex-wrap gap-1'> 
+     
       
-      <div>
-
-      {/* {
-        filtered.map((post, index) => (
-          <div className="box" key={index}>
-          <p style={{color :"red"}}>{post.node.title}
-          </p>
-          </div>))
-      } */}
-
-{filtered.map((post, index) => (
+     {filtered.map((post, index) => (
 <div key={index} className="max-w-sm rounded overflow-hidden shadow-lg bg-white mb-5">
         <img className="w-full" src="/menwho.jpg" alt="Sunset in the mountains"/>
         <div className="px-6 py-4">
@@ -78,9 +68,10 @@ export default ({posts}) => {
 </div>))
 }
 
+
 </div>
    
-    </div>
+
   )
 
 

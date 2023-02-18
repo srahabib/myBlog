@@ -1,19 +1,13 @@
 import React from 'react';
 import {useRouter} from 'next/router';
 
-
-import Search from '../../components/Search';
-
-
 const About = () => {
     const router = useRouter();
     const {slug} = router.query;
     
     return (
-        
-
         <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
-            <Search/>
+            
         <div className="lg:w-10/12 w-full">
             <p className="font-normal text-sm leading-3 text-indigo-700 hover:text-indigo-800 cursor-pointer">About</p>
             <h2 className="xl:w-8/12 lg:w-10/12 w-full font-bold text-gray-800 lg:text-4xl text-3xl lg:leading-10 leading-9 mt-2">We are here to make great design accessible and delightfull for everyone</h2>
