@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState , useEffect } from 'react';
+
 import Router from 'next/router'
 
 export const Search = () => {
@@ -17,7 +18,9 @@ const [searchInput, setSearchInput] = useState("");
          //window.location.href = loc;
 
          //return filtered;
-
+         if (searchInput === "") {
+            return;
+          }
          Router.push({
           pathname: '/SearchResults/[keyword]',
           query: { "keyword": searchInput },

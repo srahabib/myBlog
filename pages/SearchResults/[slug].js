@@ -9,8 +9,7 @@ import {useRouter} from 'next/router';
 import { getPosts } from '../../services';
 
 
-export default ({posts}) => {
-
+export default  ({posts}) => {
 
   const router = useRouter()
   //console.log(router.query);
@@ -25,6 +24,8 @@ export default ({posts}) => {
          })
 
      }, []);
+
+
 
      //console.log(Posts)
 
