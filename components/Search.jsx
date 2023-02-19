@@ -1,10 +1,5 @@
 import React from 'react'
 import { useState , useEffect } from 'react';
-import { getPosts } from '../services';
-
-import Searched from './Searched';
-
-import { useHistory } from 'react-router';
 import Router from 'next/router'
 
 export const Search = () => {

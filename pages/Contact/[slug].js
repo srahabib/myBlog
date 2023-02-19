@@ -2,9 +2,6 @@ import React from 'react'
 import {useRouter} from 'next/router';
 
 
-import Search from '../../components/Search';
-import Searched from '../../components/Searched';
-
 const Contact= () => {
 
     const router = useRouter();

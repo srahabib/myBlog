@@ -1,6 +1,5 @@
-import React , {useEffect , useState } from 'react'
+import React from 'react'
 import { Layout } from '../components'
-//import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import 'tailwindcss/tailwind.css'
 import '../styles/global.scss'

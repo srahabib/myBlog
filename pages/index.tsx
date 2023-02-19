@@ -1,10 +1,6 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
 import {PostCard , Categories , PostWidget, Author,Up, Footer, Search} from '../components'
 import {getPosts} from '../services'
 
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import { useState } from 'react';
 
 
 export default function Home({ posts }: any ) {
