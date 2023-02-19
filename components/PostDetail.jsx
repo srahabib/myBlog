@@ -17,6 +17,11 @@ const PostDetail = ({ post }) => {
         if (obj.underline) {
           modifiedText = (<u key={index}>{text}</u>);
         }
+
+        if (obj.code) {
+          modifiedText = (<code key={index}>{text}</code>);
+        }
+
       }
   
       switch (type) {
@@ -24,6 +29,8 @@ const PostDetail = ({ post }) => {
           return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
         case 'paragraph':
           return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
+        case 'code-block':
+          return <pre key={index} className="bg-gray-100 p-4 rounded-lg mb-8"><code>{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</code></pre>;
         case 'heading-four':
           return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
         case 'image':
@@ -36,6 +43,7 @@ const PostDetail = ({ post }) => {
               src={obj.src}
             />
           );
+
         default:
           return modifiedText;
       }

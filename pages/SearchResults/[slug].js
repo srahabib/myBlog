@@ -52,7 +52,7 @@ export default  ({posts}) => {
       
      {filtered.map((post, index) => (
 <div key={index} className="max-w-sm rounded overflow-hidden shadow-lg bg-white mb-5">
-        <img className="w-full" src="/menwho.jpg" alt="Sunset in the mountains"/>
+        <img className="w-full" src={post.node.featuredImage.url}alt="Sunset in the mountains"/>
         <div className="px-6 py-4">
 
             <div className="font-bold text-xl mb-2">{post.node.title}</div>
