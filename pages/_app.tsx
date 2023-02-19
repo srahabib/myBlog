@@ -3,7 +3,7 @@ import { Layout } from '../components'
 import type { AppProps } from 'next/app'
 import 'tailwindcss/tailwind.css'
 import '../styles/global.scss'
-
+import "../styles/prism-dark.css";
 import * as THREE from 'three'
 
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';

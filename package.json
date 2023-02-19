@@ -13,6 +13,7 @@
     "html-react-parser": "^3.0.8",
     "moment": "^2.29.4",
     "next": "^12.3.2-canary.25",
+    "prismjs": "^1.29.0",
     "ra-data-graphql": "^4.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@types/node": "18.11.3",
+    "@types/prismjs": "^1.26.0",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "@types/three": "^0.149.0",

@@ -1,12 +1,14 @@
 import {PostCard , Categories , PostWidget, Author,Up, Footer, Search} from '../components'
 import {getPosts} from '../services'
+import Prism from 'prismjs';
+import { useEffect } from 'react';
+import React from 'react';
+
 
 
 
 export default function Home({ posts }: any ) {
   
-  
-
   return (
 
     <div className="container mx-auto px-10 mb-8">
