@@ -5,6 +5,7 @@ import Prism from 'prismjs';
 import { Console } from 'console';
 
 //Prism.plugins.autoloader= "https://cdn.jsdelivr.net/npm/prismjs@1.28.0/components/";
+
 Prism.manual = true;
 
 
@@ -64,7 +65,19 @@ const PostDetail = ({ post  }: any) => {
         case 'paragraph':
           return <p key={index} className="mb-8">{modifiedText.map((item:any, i:any) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
         case 'code-block':
-          return  <pre key={index} ><code className={`language-${language}`}>{modifiedText.map((item:any, i:any) => <React.Fragment key={i}>{item}</React.Fragment>)}</code></pre>;
+          const code = modifiedText;
+          return  <div className='relative'>
+          <button className="copy-to-clipboard-button border-2  absolute right-0 p-1 m-2 rounded hover:bg-pink-400" type="button" onClick={
+            () => {
+              navigator.clipboard.writeText(
+                code
+              );
+            }
+          }>
+            <span className='text-white'>Copy</span>
+          </button>
+          <pre key={index} >
+            <code className={`language-${language}`}>{modifiedText.map((item:any, i:any) => <React.Fragment key={i}>{item}</React.Fragment>)}</code></pre> </div>;
         case 'heading-four':
           return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item:any, i:any) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
         case 'code-line':
