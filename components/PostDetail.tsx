@@ -1,8 +1,11 @@
 import React from 'react'
 import moment from 'moment'
 import { useEffect } from 'react';
-import Prism, { languages } from 'prismjs';
+import Prism from 'prismjs';
 
+Prism.plugins.autoloader= "https://cdn.jsdelivr.net/npm/prismjs@1.28.0/components/";
+
+Prism.manual = true;
 
 
 const PostDetail = ({ post  }: any) => {
@@ -12,20 +15,23 @@ const PostDetail = ({ post  }: any) => {
     children: String;
   
   }
-  let language = "lang-xxxx";
+  
+  let language = "css";
 
-  const CodeBlock = ({ClassName = "lang-js", children}: CodeBlockProps) => {
-     language = ClassName.replace("lang-", '');
-     console.log(language);
+   const CodeBlock = ({ClassName = "lang-js", children}: CodeBlockProps) => {
+      language = ClassName.replace("lang-", '');
+      console.log(language);
     
   
-    useEffect(()=>{
-      if(typeof window !== 'undefined'){
-        console.log("window");
-        Prism.highlightAll();
-      }
-    },[])
-  }
+
+   }
+
+   useEffect(()=>{
+    if(typeof window !== 'undefined'){
+    console.log("window");
+    Prism.highlightAll();
+    }
+  },[])
 
 
     const getContentFragment = (index:any, text:any, obj:any, type:any) => {
@@ -56,7 +62,7 @@ const PostDetail = ({ post  }: any) => {
         case 'paragraph':
           return <p key={index} className="mb-8">{modifiedText.map((item:any, i:any) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
         case 'code-block':
-          return  <pre key={index} className={`language-${language}`}><code>{modifiedText.map((item:any, i:any) => <React.Fragment key={i}>{item}</React.Fragment>)}</code></pre>;
+          return  <pre key={index} ><code className={`language-${language}`}>{modifiedText.map((item:any, i:any) => <React.Fragment key={i}>{item}</React.Fragment>)}</code></pre>;
         case 'heading-four':
           return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item:any, i:any) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
         case 'image':
@@ -110,6 +116,11 @@ const PostDetail = ({ post  }: any) => {
           </div>
         </div>
         
+        <pre>
+        <code className="language-js">
+            var x = 1;
+        </code>
+      </pre>
   
       </>
     );
