@@ -2,9 +2,9 @@ import React from 'react'
 import moment from 'moment'
 import { useEffect } from 'react';
 import Prism from 'prismjs';
+import { Console } from 'console';
 
-Prism.plugins.autoloader= "https://cdn.jsdelivr.net/npm/prismjs@1.28.0/components/";
-
+//Prism.plugins.autoloader= "https://cdn.jsdelivr.net/npm/prismjs@1.28.0/components/";
 Prism.manual = true;
 
 
@@ -16,24 +16,18 @@ const PostDetail = ({ post  }: any) => {
   
   }
   
-  let language = "css";
-
-   const CodeBlock = ({ClassName = "lang-js", children}: CodeBlockProps) => {
-      language = ClassName.replace("lang-", '');
-      console.log(language);
-    
-  
-
-   }
+ let language = "";
+     const CodeBlock = ({ClassName = "lang-js", children}: CodeBlockProps) => {
+        language = ClassName.replace("lang-", '');
+     }
 
    useEffect(()=>{
     if(typeof window !== 'undefined'){
-    console.log("window");
     Prism.highlightAll();
     }
   },[])
 
-
+    let lang =""
     const getContentFragment = (index:any, text:any, obj:any, type:any) => {
       let modifiedText = text;
   
@@ -51,10 +45,18 @@ const PostDetail = ({ post  }: any) => {
         }
 
         if (obj.code) {
-          modifiedText = (<code key={index}>{text}</code>);
+          modifiedText = (<code className='hidden' key={index}>{text}</code>);
+          language = text;
         }
-
       }
+
+      CodeBlock(
+        {
+          ClassName: language,
+          children: "test"
+        }
+     );
+      
   
       switch (type) {
         case 'heading-three':
@@ -65,6 +67,8 @@ const PostDetail = ({ post  }: any) => {
           return  <pre key={index} ><code className={`language-${language}`}>{modifiedText.map((item:any, i:any) => <React.Fragment key={i}>{item}</React.Fragment>)}</code></pre>;
         case 'heading-four':
           return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item:any, i:any) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+        case 'code-line':
+          return <code key={index} className="block  bg-gray-500 ">{modifiedText.map((item:any, i:any) => <React.Fragment key={i}>{item}</React.Fragment>)}</code>;  
         case 'image':
           return (
             <img
