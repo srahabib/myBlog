@@ -1,8 +1,34 @@
 import React from 'react'
 import moment from 'moment'
+import { useEffect } from 'react';
+import Prism, { languages } from 'prismjs';
 
-const PostDetail = ({ post }) => {
-    const getContentFragment = (index, text, obj, type) => {
+
+
+const PostDetail = ({ post  }: any) => {
+
+  interface CodeBlockProps{
+    ClassName: string;
+    children: String;
+  
+  }
+  let language = "lang-xxxx";
+
+  const CodeBlock = ({ClassName = "lang-js", children}: CodeBlockProps) => {
+     language = ClassName.replace("lang-", '');
+     console.log(language);
+    
+  
+    useEffect(()=>{
+      if(typeof window !== 'undefined'){
+        console.log("window");
+        Prism.highlightAll();
+      }
+    },[])
+  }
+
+
+    const getContentFragment = (index:any, text:any, obj:any, type:any) => {
       let modifiedText = text;
   
       if (obj) {
@@ -26,13 +52,13 @@ const PostDetail = ({ post }) => {
   
       switch (type) {
         case 'heading-three':
-          return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
+          return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item:any, i:any) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
         case 'paragraph':
-          return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
+          return <p key={index} className="mb-8">{modifiedText.map((item:any, i:any) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
         case 'code-block':
-          return <pre key={index} className="bg-gray-100 p-4 rounded-lg mb-8"><code>{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</code></pre>;
+          return  <pre key={index} className={`language-${language}`}><code>{modifiedText.map((item:any, i:any) => <React.Fragment key={i}>{item}</React.Fragment>)}</code></pre>;
         case 'heading-four':
-          return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+          return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item:any, i:any) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
         case 'image':
           return (
             <img
@@ -51,6 +77,7 @@ const PostDetail = ({ post }) => {
   
     return (
       <>
+
         <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
           <div className="relative overflow-hidden shadow-md mb-6">
             <img src={post.featuredImage.url} alt="" className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
@@ -75,13 +102,14 @@ const PostDetail = ({ post }) => {
               </div>
             </div>
             <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
-            {post.content.raw.children.map((typeObj, index) => {
-              const children = typeObj.children.map((item, itemindex) => getContentFragment(itemindex, item.text, item));
+            {post.content.raw.children.map((typeObj:any, index:any) => {
+              const children = typeObj.children.map((item:any, itemindex:any) => getContentFragment(itemindex, item.text, item, item.type));
   
               return getContentFragment(index, children, typeObj, typeObj.type);
             })}
           </div>
         </div>
+        
   
       </>
     );
