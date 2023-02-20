@@ -41,7 +41,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     
-    <Layout>
+    <Layout >
        
 
       <Component {...pageProps} />
