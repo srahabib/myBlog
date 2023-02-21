@@ -1,7 +1,7 @@
 import React from 'react'
 import {Header} from './'
 import {Footer} from './'
-import {Up} from './'
+import {Newsletter} from './'
 
 
 const Layout = ({children}) => {
@@ -9,11 +9,8 @@ const Layout = ({children}) => {
     <>
         <Header />
         {children}
+        <Newsletter />
         <Footer />
-       
-
-        
-        
        
     </>
   )

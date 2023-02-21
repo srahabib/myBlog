@@ -132,12 +132,6 @@ const PostDetail = ({ post  }: any) => {
             })}
           </div>
         </div>
-        
-        <pre>
-        <code className="language-js">
-            var x = 1;
-        </code>
-      </pre>
   
       </>
     );
