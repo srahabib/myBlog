@@ -8,27 +8,18 @@ const [email, setEmail] = useState("");
 
 const handleNewsLetter = (e) => {
     e.preventDefault();
-    console.log("email: " + email)
-    
-
-    if (email !== "") {
-       console.log("email: " + email)
-    } else {
-        return
-    }
-
-    console.log(email);
-
     const EmailObj = {
         email
     }
-
     SubmitEmail(EmailObj).then((result) => {
         
         console.log(result);
         
+    }).catch((err) => {
+        console.log(err);
     })
 }
+
 
 
 
