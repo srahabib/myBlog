@@ -172,3 +172,17 @@ export const getRecentPosts = async() => {
   
     return result.postsConnection.edges;
   };
+
+
+  export const SubmitEmail = async (obj) => {
+    const result = await fetch('/api/NewsLetter', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(obj),
+    });
+  
+    return result.json();
+  };
