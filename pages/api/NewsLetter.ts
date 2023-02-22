@@ -16,7 +16,7 @@ export default async function asynchandler(req: any, res:any) {
 
   const query = gql`
     mutation CreateNewsLetter($email: String!) {
-      createNewsLetter(data: { email: $email}) { id }
+      createNewsLetter(data: {email: $email} ) { id }
     }
   `;
 
