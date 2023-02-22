@@ -1,13 +1,15 @@
 import React, { useRef , useState , useEffect} from 'react'
 import { SubmitEmail } from '../services'
 
+
+
 const Newsletter = () => {
+
 const [email, setEmail] = useState("");
-
-
 
 const handleNewsLetter = (e) => {
     e.preventDefault();
+    
     const EmailObj = {
         email
     }
@@ -15,8 +17,6 @@ const handleNewsLetter = (e) => {
         
         console.log(result);
         
-    }).catch((err) => {
-        console.log(err);
     })
 }
 

@@ -66,7 +66,7 @@ const PostDetail = ({ post  }: any) => {
           return <p key={index} className="mb-8">{modifiedText.map((item:any, i:any) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
         case 'code-block':
           const code = modifiedText;
-          return  <div className='relative'>
+          return  <div key={index}  className='relative'>
           <button className="copy-to-clipboard-button border-2  absolute right-0 p-1 m-2 rounded hover:bg-pink-400" type="button" onClick={
             () => {
               navigator.clipboard.writeText(
