@@ -2,9 +2,8 @@ import React from 'react'
 import moment from 'moment'
 import { useEffect } from 'react';
 import Prism from 'prismjs';
-import { Console } from 'console';
 
-//Prism.plugins.autoloader= "https://cdn.jsdelivr.net/npm/prismjs@1.28.0/components/";
+
 
 Prism.manual = true;
 

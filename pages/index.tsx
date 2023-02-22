@@ -27,8 +27,6 @@ export default function Home({ posts }: any ) {
           </div>
         </div>
       </div>
-   
-       
 
     </div>
   );
