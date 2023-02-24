@@ -18,9 +18,10 @@ export default async function asynchandler(req:any, res:any) {
   });
 
   const query = gql`
-    mutation CreateForm($name: String!, $email: String!, $message: message!) {
-      createForm(data: {name: $name, email: $email, message: $message}) { id }
+    mutation CreateContact($name: String!, $email: String!, $message: String!) {
+        createContact(data: {name: $name, email: $email, message: $message} ) { id }
     }
+
   `;
 
   try {
