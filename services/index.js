@@ -186,3 +186,16 @@ export const getRecentPosts = async() => {
   
     return result.json();
   };
+
+  export const SubmitForm = async (obj) => {
+    const result = await fetch('/api/Contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(obj),
+    });
+  
+    return result.json();
+  };

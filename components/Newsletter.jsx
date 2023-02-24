@@ -22,11 +22,6 @@ const handleNewsLetter = (e) => {
 
 
 
-
-
-
-
-
   return (
     <div>
         <section className="bg-pink-200 ">

@@ -1,11 +1,34 @@
 import React from 'react'
-import {useRouter} from 'next/router';
+import { useState } from 'react'
+import { SubmitForm } from '../services'
+
 
 
 const Contact= () => {
 
-    const router = useRouter();
-    const {slug} = router.query;
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+
+    const handleForm = (e) => {
+        e.preventDefault();
+        
+        const FormObj = {
+            name,
+            email,
+            message
+        }
+        SubmitForm(FormObj).then((result) => {
+            
+            console.log(result);
+            
+        })
+
+        console.log(name);
+        console.log(email);
+        console.log(message);
+    }
 
     return (
         
@@ -56,7 +79,7 @@ const Contact= () => {
                                     <label htmlFor="full_name" className="text-gray-800 text-sm font-semibold leading-tight tracking-normal mb-2">
                                         Full Name
                                     </label>
-                                    <input required id="full_name" name="full_name" type="text" className="focus:outline-none focus:border focus:border-pink-400 font-normal w-64 h-10 flex items-center pl-3 text-sm  rounded border" placeholder={"Enter Name"} />
+                                    <input onChange={(e) => { setName(e.target.value);}} required id="full_name" name="full_name" type="text" className="focus:outline-none focus:border focus:border-pink-400 font-normal w-64 h-10 flex items-center pl-3 text-sm  rounded border" placeholder={"Enter Name"} />
                                 </div>
                             </div>
                             <div className="w-2/4 max-w-xs xl:flex xl:justify-end">
@@ -64,17 +87,7 @@ const Contact= () => {
                                     <label htmlFor="email" className="text-gray-800 text-sm font-semibold leading-tight tracking-normal mb-2">
                                         Email
                                     </label>
-                                    <input required id="email" name="email" type="email" className="focus:outline-none focus:border focus:border-pink-400 font-normal w-64 h-10 flex items-center pl-3 text-sm  rounded border" placeholder={"Enter Email"} />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex w-full flex-wrap">
-                            <div className="w-2/4 max-w-xs">
-                                <div className="flex flex-col">
-                                    <label htmlFor="phone" className="text-gray-800 text-sm font-semibold leading-tight tracking-normal mb-2">
-                                        Phone
-                                    </label>
-                                    <input required id="phone" name="phone" type="tel" className="focus:outline-none focus:border focus:border-pink-400 font-normal w-64 h-10 flex items-center pl-3 text-sm  rounded border" placeholder={"Enter Phone Number"} />
+                                    <input onChange={(e) => { setEmail(e.target.value);}} required id="email" name="email" type="email" className="focus:outline-none focus:border focus:border-pink-400 font-normal w-64 h-10 flex items-center pl-3 text-sm  rounded border" placeholder={"Enter Email"} />
                                 </div>
                             </div>
                         </div>
@@ -83,9 +96,9 @@ const Contact= () => {
                                 <label className="text-sm font-semibold text-gray-800 mb-2" htmlFor="message">
                                     Message
                                 </label>
-                                <textarea placeholder={"Leave a Message"} name="message" className=" border mb-4 rounded py-2 text-sm outline-none resize-none px-3 focus:border focus:border-pink-400" rows={8} id="message" defaultValue={""} />
+                                <textarea onChange={(e) => { setMessage(e.target.value);}} placeholder={"Leave a Message"} name="message" className=" border mb-4 rounded py-2 text-sm outline-none resize-none px-3 focus:border focus:border-pink-400" rows={8} id="message" defaultValue={""} />
                             </div>
-                            <button type="submit" className="focus:outline-none bg-pink-400 transition duration-150 ease-in-out hover:bg-pink-500 rounded text-white px-8 py-3 text-sm leading-6">
+                            <button onClick={handleForm}  type="submit" className="focus:outline-none bg-pink-400 transition duration-150 ease-in-out hover:bg-pink-500 rounded text-white px-8 py-3 text-sm leading-6">
                                 Submit
                             </button>
                         </div>

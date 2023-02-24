@@ -59,13 +59,13 @@ const filtered = Posts.filter(post => {
             
             <div className='hidden md:float-left md:contents'>
                 
-            <Link href="/Contact/ContactMe" >
+            <Link href="/Contact" >
                 <span className='md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
                 Contact
                 </span>
             </Link>
 
-            <Link  href="/About/AboutMe">
+            <Link  href="/About">
                 <span className='md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
                 About
                 </span>
