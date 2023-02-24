@@ -1,6 +1,4 @@
 import React from 'react'
-import Model from '../../components/Model'
-import { Search } from'../../components/Search.jsx'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import filtered from '../../components/Search'
