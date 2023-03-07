@@ -49,12 +49,14 @@ const filtered = Posts.filter(post => {
     <div className="container mx-auto px-10 mb-8 bg-pink-300">
         <div className='border-b w-full inline-block py-8'>
             <div className='md:float-left block'>
-                <Link href="/">
-                    <img src="bunny.png" className='w-20 h-20 inline' alt=""/>
-                </Link>
+                
+                <img src="/bunny.png" className='w-20 h-20 inline' alt=""/>
+                    <Link href="/">
+                
                  <span  className='cursor-pointer font-bold text-xl text-white'>
                     Blog Name
-                    </span> 
+                </span> 
+                </Link>
                    
             </div>
             

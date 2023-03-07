@@ -15,9 +15,9 @@ const About = () => {
         </div>
 
         <div className="lg:mt-14 sm:mt-10 mt-12">
-            <img className="lg:block hidden w-full " src="/menwho.jpg" alt="Group of people Chilling" />
-            <img className="lg:hidden sm:block hidden w-full" src="/menwho.jpg" alt="Group of people Chilling" />
-            <img className="sm:hidden block w-full" src="/menwho.jpg" alt="Group of people Chilling" />
+            <img className="lg:block hidden w-full " src="/menwho.png" alt="Group of people Chilling" />
+            <img className="lg:hidden sm:block hidden w-full" src="/menwho.png" alt="Group of people Chilling" />
+            <img className="sm:hidden block w-full" src="/menwho.png" alt="Group of people Chilling" />
         </div>
 
         <div className="lg:mt-16 sm:mt-12 mt-16 flex lg:flex-row justify-between flex-col lg:gap-8 gap-12">
@@ -27,9 +27,9 @@ const About = () => {
                 <p className="font-normal text-base leading-6 text-white mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.In the first place we have granted to God, and by this our present charter confirmed for us and our heirs forever that the English Church shall be free, and shall have her rights entire, and her liberties inviolate; and we will that it be thus observed; which is apparent from</p>
             </div>
             <div className="lg:flex items-center w-full lg:w-1/2 ">
-                <img className="lg:block hidden w-full" src="/menwho.jpg" alt="people discussing on board" />
-                <img className="lg:hidden sm:block hidden w-full h-3/4" src="/menwho.jpg" alt="people discussing on board" />
-                <img className="sm:hidden block w-full" src="/menwho.jpg" alt="people discussing on board" />
+                <img className="lg:block hidden w-full" src="/menwho.png" alt="people discussing on board" />
+                <img className="lg:hidden sm:block hidden w-full h-3/4" src="/menwho.png" alt="people discussing on board" />
+                <img className="sm:hidden block w-full" src="/menwho.png" alt="people discussing on board" />
             </div>
         </div>
         
