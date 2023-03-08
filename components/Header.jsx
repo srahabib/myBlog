@@ -2,12 +2,17 @@ import React, {useState , useEffect } from 'react'
 import Link from 'next/link'
 //import { getCategories } from '../services'
 import { getPosts } from '../services'
-import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Search } from '../components';
-import { redirect } from "react-router-dom";
 
 
 const Header = () => {
+    
+
+    const showNav = () => {
+        const nav = document.getElementById('navbar-solid-bg')
+        nav.classList.toggle('hidden')
+        
+    }
 
     const [Posts, setPosts] = useState([])
     useEffect(() => {
@@ -35,54 +40,54 @@ const filtered = Posts.filter(post => {
 });
 
 
-    function handleSearch(e) {
-        // here you can get the inputValue
-         e.preventDefault();
-         //window.history.pushState({}, "", href)
-         console.log(filtered);
-
-}
 
 
     
   return (
     <div className="container mx-auto px-10 mb-8 bg-pink-300">
-        <div className='border-b w-full inline-block py-8'>
-            <div className='md:float-left block'>
-                
+        <div className='border-b w-full inline-block py-1'>
+            <div className='md:float-left inline flex flex-wrap items-center justify-between '>
+                <div>
                 <img src="/bunny.png" className='w-20 h-20 inline' alt=""/>
-                    <Link href="/">
-                
+
+                <Link href="/">
                  <span  className='cursor-pointer font-bold text-xl text-white'>
                     Blog Name
                 </span> 
                 </Link>
+                </div>
+                
+                <button onClick={showNav} data-collapse-toggle="navbar-solid-bg" type="button" className="inline-flex justify-self-end  place-items-end content-end p-2 ml-3 text-sm  rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2  text-white focus:ring-gray-100" aria-controls="navbar-solid-bg" aria-expanded="false">
+                <span className="sr-only">Open main menu</span>
+                <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                </button>
                    
             </div>
-            
-            <div className='hidden md:float-left md:contents'>
+
+                
+            <div className='hidden flex flex-col-reverse w-full md:block md:w-auto' id="navbar-solid-bg">
                 
             <Link href="/Contact" >
-                <span className='md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
+                <span className='block py-2 pl-3 text-center pr-4 flex-center md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
                 Contact
                 </span>
             </Link>
 
             <Link  href="/About">
-                <span className='md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
+                <span className=' block py-2 pl-3 pr-4 text-center  md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
                 About
                 </span>
             </Link>
 
             <Link href="/Blog">
-                <span className='md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
+                <span className=' block  py-2 pl-3 pr-4 text-center  md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
                 Blog
                 </span>
             </Link>
 
 
             <Link href="/">
-                <span className='md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
+                <span className=' block  py-2 pl-3 pr-4 text-center rounded md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
                 Home
                 </span>
             </Link>
