@@ -24,7 +24,7 @@ const handleNewsLetter = (e) => {
 
   return (
     <div>
-        <section className="bg-pink-200 ">
+        <section className="bg-pink-100 ">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div className="mx-auto max-w-screen-md sm:text-center">
                 <h2 className="mb-4 text-3xl tracking-tight font-extrabold text-white sm:text-4xl ">Sign up for our newsletter</h2>

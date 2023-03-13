@@ -44,16 +44,19 @@ const filtered = Posts.filter(post => {
 
     
   return (
-    <div className="container mx-auto px-10 mb-8 bg-pink-300">
-        <div className='border-b w-full inline-block py-1'>
+    <div className="container mx-auto px-10 mb-8 ">
+        <div className=' w-full inline-block py-1 '>
             <div className='md:float-left inline flex flex-wrap items-center justify-between '>
                 <div>
                 <img src="/bunny.png" className='w-20 h-20 inline' alt=""/>
 
                 <Link href="/">
-                 <span  className='cursor-pointer font-bold text-xl text-white'>
-                    Blog Name
-                </span> 
+                <span className='text-2xl font-bold text-white inline pl-2'>Blog
+                 <span className='text-sky-100' style={{color:"#AEDEFC"}}>Name</span>
+                 </span>
+                
+
+
                 </Link>
                 </div>
                 
@@ -65,29 +68,29 @@ const filtered = Posts.filter(post => {
             </div>
 
                 
-            <div className='hidden flex flex-col-reverse w-full md:block md:w-auto' id="navbar-solid-bg">
+            <div className='hidden flex flex-col-reverse w-full md:block md:w-auto ' id="navbar-solid-bg">
                 
             <Link href="/Contact" >
-                <span className='block py-2 pl-3 text-center pr-4 flex-center md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
+                <span className='block py-6 pl-3 text-center pr-4 flex-center md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
                 Contact
                 </span>
             </Link>
 
             <Link  href="/About">
-                <span className=' block py-2 pl-3 pr-4 text-center  md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
+                <span className=' block py-6 pl-3 pr-4 text-center  md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
                 About
                 </span>
             </Link>
 
             <Link href="/Blog">
-                <span className=' block  py-2 pl-3 pr-4 text-center  md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
+                <span className=' block  py-6 pl-3 pr-4 text-center  md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
                 Blog
                 </span>
             </Link>
 
 
             <Link href="/">
-                <span className=' block  py-2 pl-3 pr-4 text-center rounded md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
+                <span className=' block  py-6 pl-3 pr-4 text-center rounded md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
                 Home
                 </span>
             </Link>

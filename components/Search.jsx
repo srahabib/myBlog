@@ -46,9 +46,9 @@ const [searchInput, setSearchInput] = useState("");
                 style={{outline: "none"}} 
                 autoComplete="off" 
                 id="default-search" 
-                className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-pink-500 focus:border-pink-500  " 
+                className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-pink-200 focus:border-pink-200" 
                 placeholder="Search Here..." required/>
-        <button type="submit"  onClick={handleSearch} className="text-white absolute right-2.5 bottom-2.5 bg-pink-500 hover:bg-pink-400 focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-lg text-sm px-4 py-2  ">Search here</button>
+        <button type="submit"  onClick={handleSearch} className="text-white absolute right-2.5 bottom-2.5 bg-pink-200 hover:bg-pink-400 focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-lg text-sm px-4 py-2  ">Search here</button>
         
     </div>
     
@@ -69,7 +69,7 @@ const [searchInput, setSearchInput] = useState("");
                     autoComplete="off" 
                     id="default-search"
                     className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-pink-500 focus:border-pink-500 " placeholder="Search " required/>
-                   <button type="submit" onClick={handleSearch} className="text-white absolute right-2.5 bottom-2.5 bg-pink-500 hover:bg-pink-500 focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-lg text-sm px-4 py-2">Search</button>
+                   <button type="submit" onClick={handleSearch} className="text-white absolute right-2.5 bottom-2.5 bg-pink-200 hover:bg-pink-200 focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-lg text-sm px-4 py-2">Search</button>
                </div>
 </form>
 </div>
