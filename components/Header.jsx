@@ -82,11 +82,11 @@ const filtered = Posts.filter(post => {
                 </span>
             </Link>
 
-            <Link href="/Blog">
+            {/* <Link href="/Blog">
                 <span className=' block  py-6 pl-3 pr-4 text-center  md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
                 Blog
                 </span>
-            </Link>
+            </Link> */}
 
 
             <Link href="/">
@@ -95,10 +95,7 @@ const filtered = Posts.filter(post => {
                 </span>
             </Link>
 
-
             </div>
-
-            
 
         </div>
 

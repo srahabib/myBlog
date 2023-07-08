@@ -1,39 +1,34 @@
-import {PostCard , Categories , PostWidget, Author,Up, Footer, Search} from '../components'
+import {PostCard , Categories , PostWidget} from '../components'
 import {getPosts} from '../services'
-import Prism from 'prismjs';
-import { useEffect } from 'react';
 import React from 'react';
-import Marquee from '../components/Marquee';
-
-
 
 
 export default function Home({ posts }: any ) {
-  
+  const sortedPosts = [...posts].reverse(); // Reverse the order of posts
+
   return (
     <div>
-      <Marquee />
-    <div className="container mx-auto px-10 mb-8">
-      
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <div className="lg:col-span-8 col-span-1">
-          {posts.map((post : any, index: any) => (
-            <PostCard key={index} post={post.node} />
-          ))}
-        </div>
-        <div className="lg:col-span-4 col-span-1">
-          <div className="lg:sticky relative top-8">
-            <PostWidget  />
-            <Categories />
-
+      <div className="container mx-auto px-10 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-8 col-span-1">
+            {sortedPosts.map((post : any, index: any) => (
+              <PostCard key={index} post={post.node} />
+            ))}
+          </div>
+          <div className="lg:col-span-4 col-span-1">
+            <div className="lg:sticky relative top-8">
+              <PostWidget />
+              <Categories />
+            </div>
           </div>
         </div>
       </div>
-
-    </div>
     </div>
   );
 }
+
+
+
 
 // Fetch data at build time
 export async function getStaticProps() {

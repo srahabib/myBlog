@@ -10,7 +10,6 @@ export {default as PostDetail} from './PostDetail';
 export {default as Loader } from './Loader';
 export {default as Model} from './Model';
 export {default as Footer} from './Footer';
-export{default as Up} from './Up';
 export{default as Search} from './Search';
 export{default as Snippets} from './Snippets';
 export{default as  Newsletter} from './Newsletter';

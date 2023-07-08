@@ -30,14 +30,14 @@ const Contact= () => {
     return (
         
 
-        <div className="container mx-auto pt-4 pb-4"> 
-            <div className="lg:flex">
+        <div className="container mx-auto pt-4 pb-4 "> 
+            <div className="lg:flex bg-slate-900 bg-opacity-70">
                 <div className="xl:w-2/5 lg:w-2/5  py-10 xl:rounded-bl rounded-tl rounded-tr xl:rounded-tr-none">
-                    <div className="xl:w-5/6 xl:px-0 px-8 mx-auto">
+                    <div className="xl:w-5/6 xl:px-0 px-8 mx-auto ">
                         <h1 className="xl:text-4xl text-3xl pb-4 text-white font-bold">Get in touch</h1>
                         <p className="text-xl text-white pb-8 leading-relaxed font-normal lg:pr-4">Got a question about us? Are you interested in partnering with us? Have some suggestions or just want to say Hi? Just contact us. We are here to asset you.</p>
                         <div className="flex pb-4 items-center">
-                            <div>
+                            {/* <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-phone-call" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" />
                                     <path d="M4 4h5l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v5a1 1 0 0 1 -1 1a16 16 0 0 1 -16 -16a1 1 0 0 1 1 -1" />
@@ -45,9 +45,9 @@ const Contact= () => {
                                     <path d="M15 3a6 6 0 0 1 6 6" />
                                 </svg>
                             </div>
-                            <p className="pl-4 text-white text-base">+1 (308) 321 321</p>
+                            <p className="pl-4 text-white text-base">+1 (308) 321 321</p> */}
                         </div>
-                        <div className="flex items-center">
+                        {/* <div className="flex items-center">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-mail" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="#FFFFFF" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" />
@@ -60,10 +60,10 @@ const Contact= () => {
                         <p className="text-lg text-white pt-10 tracking-wide">
                             545, Street 11, Block F <br />
                             Dean Boulevard, Ohio
-                        </p>
-                        <a href="">
+                        </p> */}
+                        {/* <a href="">
                             <p className="text-white pt-16 font-bold tracking-wide underline">View Job Openings</p>
-                        </a>
+                        </a> */}
                     </div>
                 </div>
                 <div className="xl:w-3/5 lg:w-3/5 h-full pt-5 pb-5 xl:pr-5 xl:pl-0 rounded-tr rounded-br">

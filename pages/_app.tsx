@@ -5,11 +5,6 @@ import 'tailwindcss/tailwind.css'
 import '../styles/global.scss'
 import "../styles/prism-dark.css";
 
-import * as THREE from 'three'
-
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { Scene } from 'three'
-
 
 
 function MyApp({ Component, pageProps }: AppProps) {
