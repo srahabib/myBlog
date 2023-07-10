@@ -22,7 +22,6 @@ const Contact = () => {
 
     SubmitForm(FormObj)
       .then((result) => {
-        console.log(result);
         setIsFormSubmitted(true); // Set isFormSubmitted to true when the form is submitted
       })
       .catch((error) => {
