@@ -8,18 +8,20 @@ const Footer = () => {
         <div className="mb-6 md:mb-0">
             <a href="https://flowbite.com/" className="flex items-center">
                  <img src="/bunny.png" className=" mr-3 w-24 h-24"  /> 
-                <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Blog Name</span>
+                 {/* <span className='text-2xl font-bold text-white inline pl-2'>Blog
+                 <span className='text-sky-100' style={{color:"#AEDEFC"}}>Name</span>
+                 </span> */}
             </a>
         </div>
         <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-                <h2 className="mb-6 text-sm font-semibold text-white uppercase">Resources</h2>
+                <h2 className="mb-6 text-sm font-semibold text-white uppercase">Explore</h2>
                 <ul className="text-white">
                     <li className="mb-4">
-                        <a href="https://flowbite.com/" className="hover:underline">Flowbite</a>
+                        <a href="https://flowbite.com/" className="hover:underline">Home</a>
                     </li>
                     <li>
-                        <a href="https://tailwindcss.com/" className="hover:underline">Tailwind CSS</a>
+                        <a href="https://tailwindcss.com/" className="hover:underline">About Us</a>
                     </li>
                 </ul>
             </div>
@@ -49,7 +51,7 @@ const Footer = () => {
     </div>
     <hr className="my-6 border-gray-200 sm:mx-auto  lg:my-8" />
     <div className="sm:flex sm:items-center sm:justify-between">
-        <span className="text-sm text-white sm:text-center">© 2023 <a href="https://flowbite.com/" className="hover:underline">Flowbite™</a>. All Rights Reserved.
+        <span className="text-sm text-white sm:text-center">© 2023 <a href="https://flowbite.com/" className="hover:underline">BlogName™</a>. All Rights Reserved.
         </span>
         <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a href="#" className="text-white hover:text-gray-900 ">
