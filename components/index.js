@@ -7,5 +7,3 @@ export {default as PostDetail} from './PostDetail';
 export {default as Footer} from './Footer';
 export{default as Search} from './Search';
 export{default as  Newsletter} from './Newsletter';
-
-

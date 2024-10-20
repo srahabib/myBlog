@@ -51,6 +51,8 @@ const PrivacyPolicy = () => {
             <p className="mt-4 mb-8 text-gray-400">
             If you have any questions about this Privacy Policy, please contact us from the contact page.
             </p>
+
+            <a rel="noopener noreferrer" href="/" className="px-8 py-3 font-semibold rounded bg-pink-400 text-white">Back to homepage</a>
     </div>
       </div>
     )

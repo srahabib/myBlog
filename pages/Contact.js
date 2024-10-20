@@ -31,11 +31,11 @@ const Contact = () => {
 
   return (
     <div className="container mx-auto pt-4 pb-4 ">
-      <div className="lg:flex bg-slate-900 bg-opacity-70">
+      <div className="lg:flex bg-white bg-opacity-70">
         <div className="xl:w-2/5 lg:w-2/5  py-10 xl:rounded-bl rounded-tl rounded-tr xl:rounded-tr-none">
-          <div className="xl:w-5/6 xl:px-0 px-8 mx-auto ">
-            <h1 className="xl:text-4xl text-3xl pb-4 text-white font-bold">Get in touch</h1>
-            <p className="text-xl text-white pb-8 leading-relaxed font-normal lg:pr-4">
+          <div className="xl:w-5/6 xl:px-0 px-8 mx-auto bg-pink-200 bg-opacity-70">
+            <h1 className="xl:text-4xl text-3xl pb-4 text-white font-bold p-5">Get in touch</h1>
+            <p className="text-xl text-white font-bold pb-8 leading-relaxed px-5 lg:pr-4">
               Got a question about us? Are you interested in partnering with us? Have some
               suggestions or just want to say Hi? Just contact us. We are here to asset you.
             </p>
@@ -43,13 +43,13 @@ const Contact = () => {
         </div>
         <div className="xl:w-3/5 lg:w-3/5 h-full pt-5 pb-5 xl:pr-5 xl:pl-0 rounded-tr rounded-br">
           <form id="contact" className="bg-white py-20 px-20 ">
-            <h1 className="text-4xl text-gray-800 font-extrabold mb-6">Enter Details</h1>
+            <h1 className="text-4xl text-pink-400 font-extrabold mb-6">Enter Details</h1>
             <div className="block xl:flex w-full flex-wrap justify-between mb-6">
               <div className="w-2/4 max-w-xs mb-6 xl:mb-0">
                 <div className="flex flex-col">
                   <label
                     htmlFor="full_name"
-                    className="text-gray-800 text-sm font-semibold leading-tight tracking-normal mb-2"
+                    className="text-sm font-semibold leading-tight tracking-normal mb-2 text-pink-300"
                   >
                     Full Name
                   </label>
@@ -70,7 +70,7 @@ const Contact = () => {
                 <div className="flex flex-col">
                   <label
                     htmlFor="email"
-                    className="text-gray-800 text-sm font-semibold leading-tight tracking-normal mb-2"
+                    className="text-sm font-semibold leading-tight tracking-normal mb-2 text-pink-300"
                   >
                     Email
                   </label>
@@ -91,7 +91,7 @@ const Contact = () => {
             <div className="w-full mt-6">
               <div className="flex flex-col">
                 <label
-                  className="text-sm font-semibold text-gray-800 mb-2"
+                  className="text-sm font-semibold  mb-2 text-pink-300"
                   htmlFor="message"
                 >
                   Message
